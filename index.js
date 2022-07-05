@@ -1,7 +1,7 @@
 const express = require('express');
 
 const app = express(); //Use express Library
-const PORT = 8888; //Port number
+const PORT = process.env.PORT || 8888; //Port number
 
 app.get("/status", (req, res) => {
     const localTime = (new Date()).toLocaleDateString();
